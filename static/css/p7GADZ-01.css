@@ -1,0 +1,361 @@
+/*
+*****************************************
+ PVII Gadzooks
+ by Project Seven Development
+ An Integrative CSS Page Pack
+ www.projectseven.com
+*****************************************
+*/
+body {
+	font-family: Roboto, Verdana, Geneva, sans-serif;
+	background-color: rgb(255,255,255);
+	color: #000;
+	background-color: #FFF;
+	margin: 0px;
+}
+body.gadzooks-page-bg {
+	background-image: url(img/page-bg.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: Federo, Verdana, Geneva, sans-serif;
+}
+
+/*Add a bottom border to the AMM menu when it is in fixed mode*/
+
+/*Reset CSS Box Model for all elements inside HMY structures*/
+.p7HMY, .p7HMY * { box-sizing: border-box;}
+
+/*
+-----------------------------------------
+   EXCEPTION RULES FOR AMM MENU
+-----------------------------------------
+*/
+.p7AMM {
+	padding: 0px 10px;
+}
+.navigation .hmy-content {
+	padding: 0px;
+}
+/* Font size for sub-meu items */
+.p7AMM ul ul a {font-size: 14px;}
+.p7AMM ul ul li {white-space: nowrap;}
+
+/*
+----------------------------------------------------
+   EXCEPTION RULES FOR ANIMATED IMAGE GRID BOXES
+----------------------------------------------------
+*/
+.p7HMY.image-grid {
+	padding: 4px 4px;
+}
+.image-grid div {
+	overflow: hidden;
+}
+.image-box .hmy-content {
+	position: relative;
+	padding: 0px;
+}
+.image-box p {
+	margin: 0px;
+}
+.image-box .caption {
+	transition: transform ease 1.25s .5s, opacity linear 1s;
+	bottom: 10px;
+	opacity: 0;
+	transform: translateY(-300px);
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	padding: 0px 10px;
+	color: inherit;
+	font-size: 200%;
+	text-align: center;
+}
+.running .caption {
+	opacity: 1;
+	transform: translateY(0px);
+}
+.image-box img {
+	transition: transform ease-out 1s, opacity linear .5s;
+	transform: scale(1);
+	opacity: 1;
+	border-radius: 5px;
+	display: block;
+}
+.image-box.running img {
+	transform: scale(2);
+	opacity: .22;
+}
+
+/*NOSCRIPT ACCESSIBILITY & DESIGN VIEW FIXES*/
+.image-box.scs-noscript {
+	overflow: visible;
+	transform: none;
+}
+.image-box.scs-noscript .caption {
+	position: static;
+	transform: none;
+}
+
+/*FOOTER*/
+.footer {
+	text-align: center;
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: .75em;
+	padding: 20px;
+}
+
+/*Social Icons*/
+.social-icons img {
+	filter: grayscale(1);
+	opacity: 1;
+	transition: all linear .5s;
+}
+.social-icons img:hover {
+	filter: grayscale(0);
+	opacity: 1;
+}
+ul.social-icons {
+	margin: 10px 0px 0px 0px;
+	padding: 0px;
+}
+.social-icons li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+
+/*
+-----------------------------------------
+   HIERARCHICAL INLINE PARAGRAPHS
+-----------------------------------------
+*/
+p.ranks {
+	display: inline-block;
+	margin: 0px 6px;
+}
+.rank-1 {
+	font-size: 80%;
+	font-weight: bold;
+}
+.rank-2 {
+	font-size: 130%;
+}
+.rank-3 {
+	font-size: 180%;
+	font-weight: bold;
+}
+.rank-4 {
+	font-size: 140%;
+}
+.rank-5 {
+	font-size: 100%;
+}
+
+/*UTILITY RULES*/
+.largesse {
+	font-size: 120%;
+}
+.emphatic {
+	font-family: Federo, Verdana, Geneva, sans-serif;
+	font-size: 90%;
+	line-height: 2.5;
+}
+.hmy-content-wrapper.sidebar .hmy-content {
+	font-size: 85%;
+}
+.mini-text {
+	font-size: 11px !important;
+	letter-spacing: 0.2em;
+	line-height: 2;
+}
+.hmy-content .fancy-text {
+	font-size: 80%;
+	line-height: 2;
+	padding: 0px 10px;
+	font-variant: small-caps;
+	letter-spacing: 0.15em;
+}
+.p7HMY.top-bottom-margin {
+	margin: 20px auto;
+}
+img.border-half-white {
+	border: 1px solid rgba(255,255,255,0.5);
+}
+img.border-half-black {
+	border: 1px solid rgba(0,0,0,0.5);
+}
+
+/*
+-----------------------------------
+         CALENDAR GRID
+-----------------------------------
+*/
+.p7HMY.calendar-grid {margin: 20px auto;}
+
+
+/*
+------------------------------------------------
+              MINI GRID RULES
+------------------------------------------------
+*/
+.p7HMY.mini-grid img {
+	border-radius: 5px 5px 0px 0px;
+}
+.p7HMY.mini-grid * {
+	overflow: hidden;
+}
+.p7HMY.hmy-noscript.mini-grid * {
+	overflow: visible;
+}
+.p7HMY.mini-grid img {
+	transition: transform ease-in .5s;
+	transform: scale(1);
+}
+.p7HMY.mini-grid img.running {
+	transform: scale(1.75);
+}
+/*
+--------------------------------------
+     EXCEPTION RULES FOR HARMONY
+--------------------------------------
+*/
+.p7HMY.hmy-color-root-red,
+.p7HMY .hmy-content-wrapper.hmy-color-content-red,
+.p7HMY.hmy-color-root-red.transparent,
+.p7HMY .hmy-content-wrapper.hmy-color-content-red.transparent {
+	color: #FFF;
+}
+.hmy-no-pad.hmy-content {padding: 0px 0px !important;}
+
+/*The Grid Container is a user class assigned to the hmy-content-wrapper in which the mini grid is nested*/
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+.hmy-content-wrapper.grid-container .hmy-content {padding: 0px 5px;}
+.hmy-content-wrapper.grid-container .hmy-content img {border-radius: 5px;}
+.hmy-content-wrapper.grid-container .hmy-content-wrapper.hmy-content-rounded {border-radius: 5px !important;}
+}
+
+/*
+------------------------------------------------
+   IMAGE TRANSITION FROM NORMAL TO GRAYSCALE
+------------------------------------------------
+*/
+img.to-gray {
+	transition: filter linear .75s;
+	filter: grayscale(0);
+}
+img.to-gray:hover {
+	filter: grayscale(1);
+}
+/*
+------------------------------------------------
+   IMAGE TRANSITION HIGH TO LOW CONTRAST
+------------------------------------------------
+*/
+.contrast-h-l {
+	transition: filter ease-out .75s;
+	filter: contrast(1.2);
+}
+.contrast-h-l:hover {
+	filter: contrast(1);
+}
+
+/*
+**********************************
+     IMAGE INVERSION FILTER
+**********************************
+*/
+img.inversion {
+	transition: filter ease-in-out .5s;
+	filter: invert(70%);
+}
+img.inversion:hover {
+	filter: invert(0%);
+}
+
+/*
+---------------------------------------
+  RESET HARMONY BORDERS TO DOTTED
+  Add user class of dotted-border
+  to Harmony Content Column
+---------------------------------------
+*/
+.p7HMY .hmy-content-wrapper.dotted-border.hmy-border-content-all {border: 1px dotted;}
+.p7HMY .hmy-content-wrapper.dotted-border.hmy-border-content-top {border-top: 1px dotted;}
+.p7HMY .hmy-content-wrapper.dotted-border.hmy-border-content-right {border-right: 1px dotted;}
+.p7HMY .hmy-content-wrapper.dotted-border.hmy-border-content-bottom {border-bottom: 1px dotted;}
+.p7HMY .hmy-content-wrapper.dotted-border.hmy-border-content-left {border-left: 1px dotted;}
+.p7HMY .hmy-content-wrapper.dotted-border.hmy-border-content-left-right {
+	border-left: 1px dotted;
+	border-right: 1px dotted;
+}
+.p7HMY .hmy-content-wrapper.dotted-border.hmy-border-content-top-bottom {
+	border-top: 1px dotted;
+	border-bottom: 1px dotted;
+}
+
+/*
+*******************************
+       MEDIA QUERIES
+*******************************
+*/
+@media only screen and (min-width: 0px) and (max-width: 720px) {
+	.gadzooks-page-bg .logo {order: 1;}
+	.gadzooks-page-bg .nav {order: 2;}
+	.hmy-section.logo .hmy-content {text-align: center !important;}
+	.hmy-content-wrapper.banner .hmy-content {margin-top: -1px;}
+	.hmy-content.hmy-right {text-align: left;}
+	 body {font-size: 90%;}
+	.p7HMY .hmy-section {flex-basis: 100% !important;}
+	.p7HMY .hmy-section .hmy-content-wrapper {border-radius: 0px !important; border: none !important;}
+	.p7HMY.hmy-legacy .hmy-section {float: none !important; width: 100% !important;}
+	.p7AMM ul li {padding: 0px;}
+	.p7AMM li a {padding: 8px 20px; border: none !important;}
+	.p7AMM ul ul {text-indent: 8px;}
+	.p7AMM ul ul ul {text-indent: 20px;}
+	.p7AMM ul ul ul ul {text-indent: 30px;}
+	.p7AMM.amm-responsive {padding: 0px !important; max-height: 700777px;}
+	.p7AMM.amm-responsive li {text-align: left !important; display: block;}
+	.p7AMM.amm-responsive.amm-pointer ul ul:after {display: none !important;}
+	.p7AMM.amm-responsive ul ul {width: 100%; min-width: 0px; margin: 0px !important; position: relative !important;}
+	.p7AMM.amm-responsive ul, .p7AMM.amm-responsive a {border-radius: 0px !important;}
+	.p7AMM.amm-responsive .amm-toolbar {
+		display: block; 
+		text-align: center; 
+		margin: 0px 0px; 
+		padding: 0px 10px;
+		background-color: #151515;
+		color: #FFF !important;
+		}
+		.p7AMM.amm-responsive .amm-toolbar a {
+		display: inline-block;
+		text-decoration: none;
+		font-size: 2rem;
+		color: #FFF;
+		opacity: 0.7;
+		}
+	.p7AMM.amm-responsive .amm-toolbar a:hover {opacity: 1;}
+	.p7AMM.amm-responsive .amm-toolbar.closed a:before {content: "Show Menu";}
+	.p7AMM.amm-responsive .amm-toolbar.opened a:before {content: "Hide Menu";}
+	.p7AMM.amm-responsive .amm-toolbar.closed a:before,
+	.p7AMM.amm-responsive .amm-toolbar.opened a:before {
+		font-size: 1rem !important; 
+		position: relative; 
+		top: -.25rem;
+		left: -.25rem;
+	}
+	.p7AMM.amm-responsive ul.closed {display: none;}
+	.p7AMM.amm-responsive ul.opened {display: block;}
+	.p7AMM.amm-responsive li.amm-more {display: none !important;}
+	.p7AMM.amm-responsive li.amm-root-moved {
+		position: relative !important;
+		top: 0px !important;
+		left: 0px !important;
+	}
+/*Media Query Closing Curly Brace*/
+}
+/* END MEDIA QUERIES*/

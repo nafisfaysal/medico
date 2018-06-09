@@ -1,0 +1,21 @@
+  td.details-control {
+		background: url('../img/details_open.png') no-repeat center center;
+		cursor: pointer;
+	}
+  tr.shown td.details-control {
+		background: url('../img/details_close.png') no-repeat center center;
+  }
+
+  #table-padding {
+  	padding: 20px 20px !important;
+  }
+
+  #example > thead tr th, tfoot tr th {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .align-center {
+    display: block;
+    text-align: center;
+  }

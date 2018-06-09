@@ -1,0 +1,31 @@
+.div-selected-crop-area {
+    position: absolute;
+    border: 3px solid gold;
+}
+.div-topbar {
+    position: absolute;
+    margin-top: -28px;
+}
+.div-selected-menu {
+
+    font-size: 20px;
+    color: gold;
+    float: left;
+    cursor: pointer;
+    font-weight: bold;
+    left: -32px;
+}
+.div-clear-selected-crop-area {
+    /*position: absolute;*/
+    /*right: 0px;*/
+    /*margin-top: -28px;*/
+    font-size: 20px;
+    width: 32px;
+    color: gold;
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+}
+.div-clear-selected-crop-area:hover {
+    color: #ff1212;
+}
